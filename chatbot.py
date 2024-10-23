@@ -26,14 +26,14 @@ with open(r"gbm_model.pkl", "rb") as file:
 
 
 input_data= pd.read_csv(r"Training.csv")
-symptoms_severity_df = pd.read_csv(r"datasets\Symptom-severity.csv")
-description_df = pd.read_csv(r"datasets\description.csv")
-diets_df = pd.read_csv(r"datasets\diets.csv")
-medications_df = pd.read_csv(r"datasets\medications.csv")
-symptoms_df = pd.read_csv(r"datasets\symtoms_df.csv")
-precautions_df =pd.read_csv( r"datasets\precautions_df.csv")
-workouts_df = pd.read_csv(r"datasets\workout_df.csv")
-doctors_df = pd.read_csv(r"datasets\doc.csv")
+symptoms_severity_df = pd.read_csv(r"Symptom-severity.csv")
+description_df = pd.read_csv(r"description.csv")
+diets_df = pd.read_csv(r"diets.csv")
+medications_df = pd.read_csv(r"medications.csv")
+symptoms_df = pd.read_csv(r"symtoms_df.csv")
+precautions_df =pd.read_csv( r"precautions_df.csv")
+workouts_df = pd.read_csv(r"workout_df.csv")
+doctors_df = pd.read_csv(r"doc.csv")
 
 # Setup features and initialize keyword processor
 features = input_data.columns[:-1]
