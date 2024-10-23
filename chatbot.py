@@ -403,7 +403,7 @@ def main():
                     for _, doctor in doctors.iterrows():
                         folium.Marker(
                             [doctor['LAT'], doctor['LON']],
-                            popup = f"""{doctor['Doctor's Name']} - {doctor['Specialist']}""",
+                            popup = f"""{doctor["Doctor's Name"]} - {doctor["Specialist"]}"""
                             icon=folium.Icon(color="green", icon="plus"),
                         ).add_to(m)
                     
