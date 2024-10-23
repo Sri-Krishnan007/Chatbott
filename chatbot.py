@@ -46,7 +46,7 @@ keyword_processor.add_keywords_from_list(features.tolist())
 # Initialize Medical Preprocessor
 class MedicalPreprocessor:
     def __init__(self, diseases, symptoms):
-        self.nlp = spacy.load('en_core_web_sm')
+        
         self.diseases = [d.lower() for d in diseases]
         self.symptoms = [s.lower() for s in symptoms]
         self.chunk_grammar = r"""
