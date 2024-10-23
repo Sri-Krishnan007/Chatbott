@@ -19,27 +19,21 @@ import speech_recognition as sr
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
 import json
 
-def read_csv_with_encoding(file_path, encodings=['utf-8', 'iso-8859-1', 'cp1252']):
-    for encoding in encodings:
-        try:
-            return pd.read_csv(file_path, encoding=encoding)
-        except UnicodeDecodeError:
-            continue
-    raise ValueError(f"Unable to read the file with any of the provided encodings: {encodings}")
 
-input_data = read_csv_with_encoding(r"datasets\Training.csv")
 with open(r"models\gbm_model.pkl", "rb") as file:
     gbm = pickle.load(file)
 
-# Load all other datasets
-symptoms_severity_df = read_csv_with_encoding(r"datasets\Symptom-severity.csv")
-description_df = read_csv_with_encoding(r"datasets\description.csv")
-diets_df = read_csv_with_encoding(r"datasets\diets.csv")
-medications_df = read_csv_with_encoding(r"datasets\medications.csv")
-symptoms_df = read_csv_with_encoding(r"datasets\symtoms_df.csv")
-precautions_df = read_csv_with_encoding(r"datasets\precautions_df.csv")
-workouts_df = read_csv_with_encoding(r"datasets\workout_df.csv")
-doctors_df = read_csv_with_encoding(r"datasets\doc.csv")
+
+input_data= pd.read_csv(r"datasets\Training.csv")
+symptoms_severity_df = pd.read_csv(r"datasets\Symptom-severity.csv")
+description_df = pd.read_csv(r"datasets\description.csv")
+diets_df = pd.read_csv(r"datasets\diets.csv")
+medications_df = pd.read_csv(r"datasets\medications.csv")
+symptoms_df = pd.read_csv(r"datasets\symtoms_df.csv")
+precautions_df =pd.read_csv( r"datasets\precautions_df.csv")
+workouts_df = pd.read_csv(r"datasets\workout_df.csv")
+doctors_df = pd.read_csv(r"datasets\doc.csv")
+
 # Setup features and initialize keyword processor
 features = input_data.columns[:-1]
 prognosis = input_data['prognosis']
