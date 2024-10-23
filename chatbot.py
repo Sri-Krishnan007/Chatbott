@@ -20,7 +20,7 @@ from streamlit_webrtc import webrtc_streamer, WebRtcMode
 import json
 
 
-with open(r"models\gbm_model.pkl", "rb") as file:
+with open(r"gbm_model.pkl", "rb") as file:
     gbm = pickle.load(file)
 
 
