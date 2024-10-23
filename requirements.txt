@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy==1.24.3
-pickle5==0.0.11
+pickle5
 spacy==3.6.0
 nltk==3.7
 textblob==0.17.1
