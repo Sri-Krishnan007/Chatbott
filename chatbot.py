@@ -411,7 +411,7 @@ def main():
                         st.write("Travel time to " + doctor["Doctor's Name"] + ": " + str(travel_time))
                     
                         travel_time = calculate_travel_time(user_lat, user_lon, doctor['LAT'], doctor['LON'])
-                        st.write(f"Travel time to {doctor['Doctor\'s Name']}: {travel_time}")
+                        
                 
                     folium_static(m)
                 else:
