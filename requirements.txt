@@ -1,6 +1,7 @@
 streamlit
 pandas
 numpy==1.24.3
+scikit-learn
 
 spacy==3.6.0
 nltk==3.7
