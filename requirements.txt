@@ -156,10 +156,7 @@ multidict==6.0.5
 multiprocess==0.70.16
 multitasking==0.0.11
 murmurhash==1.0.10
-mysql-connector-python==9.0.0
-mysqlclient==2.2.4
-namex==0.0.8
-nest-asyncio==1.6.0
+
 networkx==3.3
 nltk==3.8.1
 numpy==1.26.3
