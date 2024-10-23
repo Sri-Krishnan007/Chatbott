@@ -70,13 +70,6 @@ faiss-cpu==1.9.0
 fastapi==0.115.2
 filelock==3.14.0
 flashtext==2.7
-Flask==3.0.3
-Flask-Bcrypt==1.0.1
-Flask-Mail==0.10.0
-Flask-MySQLdb==2.0.0
-Flask-PyMongo==2.3.0
-Flask-Session==0.8.0
-Flask-SQLAlchemy==3.1.1
 flatbuffers==24.3.25
 folium==0.16.0
 fonttools==4.47.2
