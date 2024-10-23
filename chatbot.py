@@ -402,10 +402,13 @@ def main():
                 
                     for _, doctor in doctors.iterrows():
                         folium.Marker(
-                            [doctor['LAT'], doctor['LON']],
-                            popup = f"""{doctor["Doctor's Name"]} - {doctor["Specialist"]}""",
-                            icon=folium.Icon(color="green", icon="plus"),
-                        ).add_to(m)
+                        [doctor['LAT'], doctor['LON']],
+                        popup=f"""{doctor["Doctor's Name"]} - {doctor["Specialist"]}""",
+                        icon=folium.Icon(color="green", icon="plus"),
+                            ).add_to(m)
+
+    # Concatenating strings instead of using an f-string
+                        st.write("Travel time to " + doctor["Doctor's Name"] + ": " + str(travel_time))
                     
                         travel_time = calculate_travel_time(user_lat, user_lon, doctor['LAT'], doctor['LON'])
                         st.write(f"Travel time to {doctor['Doctor\'s Name']}: {travel_time}")
