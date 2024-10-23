@@ -25,7 +25,7 @@ with open(r"gbm_model.pkl", "rb") as file:
     gbm = pickle.load(file)
 
 
-input_data= pd.read_csv(r"datasets\Training.csv")
+input_data= pd.read_csv(r"Training.csv")
 symptoms_severity_df = pd.read_csv(r"datasets\Symptom-severity.csv")
 description_df = pd.read_csv(r"datasets\description.csv")
 diets_df = pd.read_csv(r"datasets\diets.csv")
